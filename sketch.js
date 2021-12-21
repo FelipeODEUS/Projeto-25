@@ -11,6 +11,7 @@ var world;
 function setup() {
 	createCanvas(1600, 700);
 	rectMode(CENTER);
+    
 
 
 	engine = Engine.create();
@@ -19,6 +20,10 @@ function setup() {
 	groundObject=new ground(width/2,670,width,20);
 	dustbinObj=new dustbin(1200,650);
 	paperObj=new paper(1000,200,300); 
+	paperObj.scale = 0.5;
+
+
+	
 
 	Engine.run(engine);
   
@@ -28,6 +33,7 @@ function setup() {
 function draw() {
   rectMode(CENTER);
   background(230);
+  
  
 
   groundObject.display();
